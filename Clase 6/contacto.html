@@ -18,6 +18,31 @@
 
     <main>
         <h1>Contacto</h1>
+        <form action="contacto.html" method="post">
+            <!--
+            Nombre
+            Telefono
+            Tamaño
+            edad
+            aclaraciones
+            -->
+            <label for="id-nombre">Nombre</label>
+            <input type="text" name="nombre" id="id-nombre">
+                
+            <label for="id-telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="id-telefono">
+            <label for="id-tamaño">Tamaño</label>
+            <select name="tamaño-animal" id="id-tamaño">
+                <option value="c">Chico</option>
+                <option value="m">Mediano</option>
+                <option value="g">Grande</option>
+            </select>
+            <label for="id-edad">Edad</label>
+            <input type="number" name="edad" id="id-edad">
+            <label for="id-comentario">Comentarios sobre la mascota</label>
+            <textarea name="comentario" id="id-comentario"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
 
     <footer>
