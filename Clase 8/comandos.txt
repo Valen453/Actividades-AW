@@ -1,0 +1,20 @@
+Comandos de consola
+
+    Comandos de primera vez
+        -Instalar nodejs
+        -Verificar instalacion
+            node -v
+        -Verificar npm
+            npm -v
+        -Instalar pnpm
+            npm i -g pnpm
+
+    Por proyecto
+        - cd dirproy
+        - Si no existe package json
+            pn init
+        - Instalar five-server
+            pn add five-server
+        - Reinstalar paquetes, si existe package json
+            pn install
+        
