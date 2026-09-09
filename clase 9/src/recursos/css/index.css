@@ -1,0 +1,60 @@
+@font-face {
+    font-family: valen;
+    src: url(./../fuentes/NotoSansSaurashtra-Regular.ttf);
+}
+
+@font-face {
+    font-family: prueba;
+    src: url(./../fuentes/NotoSansSundanese-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*outline: 1px red solid;*/
+}
+
+html {
+    font-family: valen;
+}
+
+body {
+    background-color: rgba(34, 28, 28, 0.959);
+    margin: 0;
+}
+
+.encabezado-principal {
+    background-color: aqua;
+    padding: 30px;
+}
+
+a {
+    color: rgb(17, 6, 6);
+    text-decoration: none;
+}
+
+nav a {
+    padding: 10px;
+}
+
+.contenido-principal article {
+    border-radius: 30px;
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    background-color: red;
+}
+
+.vinculos {
+    color: antiquewhite;
+}
+
+#id-edad {
+    height: 40px;
+}
+
+[href] {
+    font-size: 20px;
+}
