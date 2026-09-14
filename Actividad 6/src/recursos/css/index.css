@@ -1,0 +1,23 @@
+html, body, h1, h2,h3 {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(95, 147, 172);
+}
+
+a {
+    color: rgb(0, 0, 126);
+    text-decoration: none;
+}
+
+nav .ancla{
+    background-color: beige;
+    padding: 5px;
+    margin: 5px;
+}
