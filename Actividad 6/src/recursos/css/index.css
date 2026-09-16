@@ -3,6 +3,10 @@ html, body, h1, h2,h3 {
     margin: 0;
 }
 
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -28,3 +32,15 @@ nav .ancla{
     margin: 5px;
 }
 
+.contenedor {
+    display: flex;
+}
+
+article {
+    height: 300px;
+    width: 50%;
+    background-color: rgb(95, 147, 172);
+    border-radius: 30px;
+    margin:30px;
+    padding: 30px;
+}
