@@ -16,8 +16,15 @@ a {
     text-decoration: none;
 }
 
+main h1, main h2, main p, main li{
+    text-align: center;
+}
+
+
+
 nav .ancla{
     background-color: beige;
     padding: 5px;
     margin: 5px;
 }
+
