@@ -1,0 +1,171 @@
+@font-face{
+    font-family: Poppins;
+    src: url(../fuentes/Poppins-Regular.ttf);
+}
+
+/* Genéricos */
+
+*{
+    box-sizing:border-box;
+}
+
+/* Reset */
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-family:Poppins, Verdana, sans-serif;
+}
+
+/* Grilla del layout: encabezado, contenido y pie */
+body{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto 1fr auto;
+    min-height:100vh;
+    background-color:#eeeeee;
+}
+
+a{
+    color:#941212;
+    text-decoration:none;
+}
+
+/* Encabezado */
+
+.encabezado-principal{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    padding:10px;
+    background-color:#191281;
+    border-bottom:2px solid #d8d8d8;
+
+}
+
+.encabezado-principal nav{
+
+    display:flex;
+    align-items:center;
+    width:auto;
+    padding:10px;
+    margin-top:0;
+    background:#bbbbbb;
+    border:1px solid black;
+
+}
+
+.encabezado-principal nav a{
+
+    margin-right:20px;
+
+}
+
+/* Contenido */
+
+.contenido-principal{
+
+    padding:15px;
+
+}
+
+.contenido-principal section{
+
+    margin-top:20px;
+
+}
+
+.servicios{
+
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+
+}
+
+.servicios img{
+
+    width:100%;
+    max-width:300px;
+
+}
+
+@media (max-width:999px){
+
+    .servicios{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+.contenido-principal article{
+
+    margin-top:20px;
+
+}
+
+.contenido-principal img{
+
+    margin-top:10px;
+    margin-bottom:10px;
+    border:1px solid gray;
+
+}
+
+.contenido-principal form input,
+.contenido-principal form textarea{
+
+    display:block;
+    width:100%;
+    padding:8px;
+    margin-bottom:10px;
+
+}
+
+.contenido-principal form button{
+
+    padding:10px;
+
+}
+
+/* Pie */
+
+.pie-principal{
+
+    margin-top:30px;
+    padding:20px 10px 80px;
+    background:#bbbbbb;
+    border-top:2px solid #3b0000;
+
+}
+
+.pie-principal ul{
+
+    list-style:none;
+
+}
+
+.boton-whatsapp{
+
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    padding:10px;
+    background-color:#25d366;
+    color:white;
+
+}
