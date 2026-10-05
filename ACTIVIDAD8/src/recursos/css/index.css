@@ -1,0 +1,167 @@
+/* Fuente local: se conserva la tipografía incluida en el proyecto. */
+@font-face {
+    font-family: Sora;
+    src: url(./fuentes/Sora-Regular.ttf);
+}
+
+/* Modelo alternativo: padding y borde forman parte del ancho declarado. */
+* {
+    box-sizing: border-box;
+}
+
+/* Reseteo básico para evitar diferencias de márgenes iniciales del navegador. */
+html,
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Primero los selectores de tipo: establecen los estilos generales heredables. */
+html {
+    font-family: Sora, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #f3f1e9;
+    color: #24372b;
+}
+
+a {
+    color: #285d3a;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+button {
+    font-family: Sora, Verdana, sans-serif;
+    font-size: 1rem;
+}
+
+/* Después las clases: especializan los estilos sin usar selectores id ni !important.
+   Una clase tiene más especificidad que un tipo. A igual especificidad y origen,
+   prevalece la regla que aparece después, no simplemente cualquier regla inferior. */
+
+/* Flex mantiene el header como bloque hacia afuera y organiza sus hijos hacia adentro. */
+.encabezado-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #dedfce;
+    border-bottom: 2px solid #748468;
+}
+
+/* Se combinan clase y tipo para afectar solamente el menú del encabezado.
+   La columna permite que los enlaces entren también en pantallas pequeñas. */
+.encabezado-principal nav {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.encabezado-principal nav a {
+    margin: 5px;
+}
+
+/* Main limita el ancho de lectura y mantiene separación respecto de los bordes. */
+.contenido-principal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.contenido-principal section {
+    margin-top: 30px;
+}
+
+/* Cada artículo separa visualmente una cabaña sin cambiar su significado semántico. */
+.contenido-principal article {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #b3baa9;
+}
+
+.contenido-principal article img {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 1.2rem;
+}
+
+/* El enlace sigue siendo un vínculo: navega a otra página, no envía el formulario. */
+.enlace-reserva {
+    display: block;
+    padding: 12px;
+    background-color: #285d3a;
+    color: #ffffff;
+}
+
+.contenedor-form {
+    max-width: 600px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #b3baa9;
+}
+
+/* Flex en columna ordena las etiquetas y los controles del formulario. */
+.contenedor-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-form form input,
+.contenedor-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #748468;
+}
+
+.contenedor-form form button {
+    padding: 12px;
+    background-color: #285d3a;
+    color: #ffffff;
+    border: 1px solid #285d3a;
+}
+
+/* El pie usa el mismo color de fondo que el encabezado para unificar el layout. */
+.pie-principal {
+    padding: 20px;
+    background-color: #dedfce;
+    border-top: 2px solid #748468;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable - Catálogo</title>
+    <!-- Una única hoja de estilos mantiene la presentación de las dos páginas. -->
+    <link rel="stylesheet" href="recursos/css/index.css">
+</head>
+<body>
+    <!--
+        Propuesta: Inicio concentra la exploración del catálogo en una sola página,
+        con navegación interna hacia #cabanas. Es una aproximación de navegación
+        a una SPA: evita abrir un documento por cada cabaña.
+        Reservas adopta el enfoque MPA: abre reservas.html como documento separado
+        para dedicar una pantalla a la consulta y permitir un enlace directo.
+        Técnicamente esta entrega es un sitio estático de dos páginas con anclas,
+        no una SPA real: una SPA requiere lógica de JavaScript para actualizar vistas.
+        La evolución propuesta sería convertir Inicio en ese módulo SPA.
+        SPA/MPA describen la navegación; CSR/SSR describen dónde se genera el HTML.
+        CSR lo genera o actualiza en el navegador; SSR lo genera en el servidor.
+        No son equivalentes: una SPA puede recibir HTML inicial mediante SSR.
+        Aquí el HTML ya está escrito en archivos: no hay CSR ni SSR dinámico.
+    -->
+    <!-- Header y footer se repiten para mantener el mismo layout en ambas páginas. -->
+    <header class="encabezado-principal">
+        <!-- El alt identifica la marca si la imagen no carga y para quienes usan lectores de pantalla. -->
+        <a href="index.html" aria-label="Ir al inicio de Retiro Sustentable">
+            <img src="recursos/imagenes/logo-rs.svg" alt="Retiro Sustentable" width="150">
+        </a>
+        <!-- Nav agrupa los enlaces de navegación principal. -->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#cabanas">Cabañas</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+    <!-- Main identifica el contenido propio de esta página; se usa un solo h1. -->
+    <main class="contenido-principal">
+        <h1>Cabañas para alquiler en las sierras de Córdoba</h1>
+        <p>Cuatro cabañas totalmente equipadas al pie de la montaña en San Javier, Traslasierra, Córdoba.</p>
+        <p>Explorá las opciones y consultanos por tu próxima estadía.</p>
+        <!-- Section reúne el catálogo por tema y article identifica cada alojamiento independiente. -->
+        <section id="cabanas">
+            <h2>Catálogo de cabañas</h2>
+            <p>Precios de ejemplo por día, expresados en pesos argentinos.</p>
+            <!-- Se usan las imágenes WebP del proyecto para reducir el peso respecto de los JPG. -->
+            <article>
+                <h3>Cabaña 1</h3>
+                <img src="recursos/imagenes/modelo1.webp" alt="Cabaña de madera elevada sobre pilotes, con balcón y vista a las sierras" width="600">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo vel arcu posuere facilisis.</p>
+                <!-- Precios ficticios para resolver el ejercicio, no tarifas del cliente. -->
+                <p class="precio">$80.000 ARS por día</p>
+                <a class="enlace-reserva" href="reservas.html">Consultar reserva de la cabaña 1</a>
+            </article>
+            <article>
+                <h3>Cabaña 2</h3>
+                <img src="recursos/imagenes/modelo2.webp" alt="Cabaña de madera con galería cubierta al pie de la montaña" width="600">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod, neque sed porta luctus, velit erat tincidunt nibh.</p>
+                <!-- Precios ficticios para resolver el ejercicio, no tarifas del cliente. -->
+                <p class="precio">$85.000 ARS por día</p>
+                <a class="enlace-reserva" href="reservas.html">Consultar reserva de la cabaña 2</a>
+            </article>
+            <article>
+                <h3>Cabaña 3</h3>
+                <img src="recursos/imagenes/modelo3.webp" alt="Cabaña de madera de dos plantas rodeada de árboles" width="600">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec vitae lacus quis erat blandit tincidunt.</p>
+                <!-- Precios ficticios para resolver el ejercicio, no tarifas del cliente. -->
+                <p class="precio">$95.000 ARS por día</p>
+                <a class="enlace-reserva" href="reservas.html">Consultar reserva de la cabaña 3</a>
+            </article>
+            <article>
+                <h3>Cabaña 4</h3>
+                <img src="recursos/imagenes/modelo4.webp" alt="Cabaña de madera de dos plantas con balcón y galería" width="600">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet risus in justo feugiat consequat.</p>
+                <!-- Precios ficticios para resolver el ejercicio, no tarifas del cliente. -->
+                <p class="precio">$100.000 ARS por día</p>
+                <a class="enlace-reserva" href="reservas.html">Consultar reserva de la cabaña 4</a>
+            </article>
+        </section>
+    </main>
+    <!-- Footer contiene información común del sitio, fuera del contenido principal. -->
+    <footer class="pie-principal">
+        <p>Retiro Sustentable · San Javier, Traslasierra, Córdoba.</p>
+        <p>&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Sustentable - Reservas</title>
+    <!-- Una única hoja de estilos mantiene la presentación de las dos páginas. -->
+    <link rel="stylesheet" href="recursos/css/index.css">
+</head>
+<body>
+
+    <!-- Header y footer se repiten para mantener el mismo layout en ambas páginas. -->
+    <header class="encabezado-principal">
+        <!-- El alt identifica la marca si la imagen no carga y para quienes usan lectores de pantalla. -->
+        <a href="index.html" aria-label="Ir al inicio de Retiro Sustentable">
+            <img src="recursos/imagenes/logo-rs.svg" alt="Retiro Sustentable" width="150">
+        </a>
+        <!-- Nav agrupa los enlaces de navegación principal. -->
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#cabanas">Cabañas</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+    </header>
+    <main class="contenido-principal">
+        <h1>Reservas</h1>
+        <h2>Consultá disponibilidad</h2>
+        <p>Completá tus datos y las fechas de tu estadía. En el comentario podés indicar qué cabaña te interesa.</p>
+        <div class="contenedor-form">
+            <!--
+                Se usa action para indicar el destino y method post para enviar los datos.
+                POST lleva los datos en el cuerpo de la petición, en lugar de agregarlos a la URL.
+                Esta maqueta no procesa ni almacena consultas: un archivo HTML no recibe reservas.
+                Para publicarla, action debe apuntar a un servicio del servidor que procese POST,
+                valide los datos y compruebe que la fecha hasta sea posterior a la fecha desde.
+                No se inventa una URL de procesamiento que el cliente no ha proporcionado.
+            -->
+            <form action="reservas.html" method="post">
+                <!-- for coincide con id; name identifica cada dato enviado al servidor. -->
+                <label for="id-nombre">Nombre de la persona que consulta</label>
+                <input type="text" name="nombre" id="id-nombre" required>
+
+                <!-- Tel admite formatos de teléfono con espacios, prefijos y signos. -->
+                <label for="id-telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="id-telefono" required>
+
+                <!-- Email permite que el navegador compruebe el formato básico del correo. -->
+                <label for="id-email">Email</label>
+                <input type="email" name="email" id="id-email" required>
+
+                <!-- Date ofrece un control de fecha; required evita dejar los datos principales vacíos. -->
+                <label for="id-desde">Fecha desde</label>
+                <input type="date" name="fecha-desde" id="id-desde" required>
+
+                <label for="id-hasta">Fecha hasta</label>
+                <input type="date" name="fecha-hasta" id="id-hasta" required>
+
+                <!-- Textarea permite un comentario de varias líneas y se deja como dato opcional. -->
+                <label for="id-comentario">Comentario (opcional)</label>
+                <textarea name="comentario" id="id-comentario" rows="5"></textarea>
+
+                <button type="submit">Enviar consulta</button>
+            </form>
+        </div>
+    </main>
+    <!-- Footer contiene información común del sitio, fuera del contenido principal. -->
+    <footer class="pie-principal">
+        <p>Retiro Sustentable · San Javier, Traslasierra, Córdoba.</p>
+        <p>&copy; 2026 Retiro Sustentable. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
